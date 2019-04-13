@@ -1,0 +1,16 @@
+						Regarding System Calls and CPU Scheduling Algorithms :
+
+		1. The CPU Scheduling Algorithm implemented is Preemptive Shortest Job First,also 
+		   called Shortest Remaining Time First as asked in the question.
+		
+		2. Sleep() :: This System Calls pauses the system's state for specified time in milliseconds.
+		
+		3. System(color ) :: This System Call changes the color of console to the passed color code as argument.
+		
+		4. CreateFile() :: Present in the Win32 API in the winbase.h file,
+				   this function is used to open or create a file .
+		
+		5. ReadFile() :: Reads the contents of byte stream from the specified file.
+
+		
+			Made By - PRIYANSH TIWARI , Roll No. 13 , Reg.No 11711226.
