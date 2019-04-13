@@ -1,62 +1,17 @@
-#include <stdio.h>
-#include <stdlib.h>
-#include <string.h>
-#include<windows.h>
-void ScreenShow()
+void input()
 {
-	
-}
+	LPCWSTR fname2 = L"CPU_BURST.txt";
+hAppend = CreateFile(fname2, // open CPU_BURST.txt
 
-void calculate()
-{
-	
-}
+GENERIC_WRITE, // Flag which means that file is opened for writing 
 
-void display()
-{
-	
-}
+0, // This indicates that the file cant be shared.This is the security descriptor.
 
+NULL, // Security Descriptor
 
-int main()
-{
-	FILE *fp = fopen("CPU_BURST.txt", "r");
-     int burstTime[20],p[20],waitTime[20],tat[20],i=0,j,n=5,total=0,pos,temp;
-     float avg_wt,avg_tat;
-     printf("\nReading CPU_BURST.txt File\n");
-     while((getc(fp))!=EOF)
-     {
+OPEN_ALWAYS, // Create if not open
 
-         fscanf(fp, "%d", &burstTime[i]);
-         if(burstTime[i]>0){
-            p[i]=i+1;  
-		    i++;
-		}         
+FILE_ATTRIBUTE_NORMAL, // normal file
 
-     }
-     printf("PROCESS\t BURST TIME\n");
-for(j=0;j<n;j++)
-{
-	
-	printf("P%d\t %d\n",p[j],burstTime[j]);
-}
-
-for(i=0;i<n;i++)
-{
-	
-	for(j=i+1;j<n;j++)
-	{
-		if(burstTime[i]>burstTime[j])
-		{
-			temp=burstTime[i];
-			burstTime[i]=burstTime[j];
-			burstTime[j]=temp;
-			pos=p[i];
-			p[i]=p[j];
-			p[j]=pos;
-		}
-	}
-}
-
-
+NULL);
 }
